@@ -7,9 +7,11 @@ Whole-image classification model
 Trained using entire training images
 Evaluates classification performance on whole images
 Not used during object detection
+
 Region-based classification model
 Trained on insect regions cropped using YOLO bounding boxes
 Used during detection to classify region proposals
+
 Detection Pipeline
 Input a test image
 Apply Selective Search to produce region proposals
@@ -20,6 +22,7 @@ Classify with the region-based RF model
 Filter overlapping proposals using Non-Maximum Suppression (NMS)
 Output final bounding boxes and insect class predictions
 Evaluate performance using mAP and per-class AP
+
 Results and Analysis
 Detection Performance
 Mean Average Precision (mAP): 0.0038
@@ -34,5 +37,6 @@ Per-class Observations
 Best detection: Moths (F1 = 0.4783, AUC = 0.834)
 Worst detection: Beetles (F1 = 0.0000, AUC = 0.503)
 Classes with distinct texture/patterns (e.g., Moths, Snails) perform better than those with subtle or variable features
+
 Conclusion
 The HOG + Random Forest pipeline demonstrates that classical CV methods can perform basic object detection. While suitable for simple textures, their performance on complex scenes is limited compared to CNN-based approaches.
