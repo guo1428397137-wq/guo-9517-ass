@@ -1,3 +1,15 @@
+# HoG + SVM + Selective Search for Image Classification and Object Detection
+
+Requirements:
+python>=3.8
+opencv-python>=4.8.0.76
+imutils>=0.5.4
+numpy>=1.24.0
+scikit-learn>=1.3.0
+pyyaml>=6.0.1
+joblib>=1.3.0
+tqdm>=4.66.1
+
 This method implements a classical computer vision–based image classification system that combines HOG feature extraction, a one-vs-rest SVM classifier, and Selective Search for region proposal. The goal is to detect and classify objects in images without using deep learning.
 
 We train two different kinds of models:
